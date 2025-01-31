@@ -1,0 +1,142 @@
+/* Navigation Bar */
+.NavigationBar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    background-color: #E5D1B9;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+
+/* icons */
+.NavigationBar img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    border-radius: 20px;
+}
+
+/* logo */
+.NavigationBar .logo {
+    width: 120px;
+    height: auto;
+}
+
+/*NavigationBarList*/
+.NavigationBarList {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    color: #000;
+    font-size: 18px;
+}
+
+.NavigationBar .active {
+    color: #ED6972;
+}
+
+.NavigationBar li {
+    cursor: pointer;
+}
+
+/* NavigationBarRight */
+.NavigationBarRight {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Button */
+.NavigationBar button {
+    background: transparent;
+    font-size: 16px;
+    color: #000;
+    border: 1px solid #000;
+    padding: 10px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.NavigationBar button:hover {
+    background-color: #000;
+    color: #ED6972;
+}
+
+/* NavigationBarSearchIcon */
+.NavigationBarSearchIcon {
+    position: relative;
+}
+
+.NavigationBarSearchIcon .dot {
+    position: absolute;
+    min-width: 10px;
+    min-height: 10px;
+    background-color: #ED6972;
+    border-radius: 5px;
+    top: -8px;
+    right: -8px;
+}
+
+@media (max-width:1050px) {
+    .NavigationBar .logo {
+        width: 140px;
+    }
+
+    .NavigationBarList {
+        gap: 20px;
+        font-size: 17px;
+    }
+
+    .NavigationBarRight {
+        gap: 30px;
+    }
+
+    .NavigationBarRight img {
+        width: 22px;
+    }
+
+    .NavigationBarRight button {
+        padding: 8px 25px;
+    }
+}
+
+@media (max-width:900px) {
+    .NavigationBar .logo {
+        width: 90px;
+    }
+
+    .NavigationBarList {
+        gap: 15px;
+        font-size: 16px;
+    }
+
+    .NavigationBarRight {
+        gap: 20px;
+    }
+
+    .NavigationBarRight img {
+        width: 20px;
+    }
+
+    .NavigationBarRight button {
+        font-size: 10px;
+        padding: 7px 20px;
+    }
+}
+
+@media (max-width:750px) {
+    .NavigationBarList {
+        display: none;
+    }
+
+    .NavigationBar .logo {
+        width: 60px;
+    }
+}

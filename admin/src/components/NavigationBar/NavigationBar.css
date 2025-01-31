@@ -1,0 +1,14 @@
+.NavigationBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 4%;
+}
+
+.NavigationBar .logo {
+    width: max(10%, 50px);
+}
+
+.NavigationBar .profile {
+    width: 40px;
+}

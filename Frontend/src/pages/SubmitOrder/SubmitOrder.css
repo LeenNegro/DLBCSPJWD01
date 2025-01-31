@@ -1,0 +1,81 @@
+.PlaceOrder {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 50px;
+    margin: 100px 0px;
+}
+
+.PlaceOrderLeft {
+    width: 100%;
+    max-width: max(30%, 500px);
+}
+
+.PlaceOrderLeft .title {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+
+.PlaceOrderLeft input {
+    margin-bottom: 15px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #C5C5C5;
+    border-radius: 4px;
+    outline-color: #ed6972;
+}
+
+.PlaceOrderLeft .MultiField {
+    display: flex;
+    gap: 10px;
+}
+
+.PlaceOrderRight {
+    width: 100%;
+    max-width: max(40%, 500px);
+}
+
+.PlaceOrderSubmit {
+    margin-top: 50px;
+    border: none;
+    background-color: #ed6972;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.Payment {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 15px;
+}
+
+.Payment h2 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.Payment .PaymentOption {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #ed6972;
+    padding: 15px;
+    border-radius: 4px;
+    min-width: 300px;
+    cursor: pointer;
+}
+
+.Payment .PaymentOption:hover {
+    background-color: #ffe7de;
+}
+
+
+@media (max-width:700px) {
+    .PlaceOrder {
+        flex-direction: column;
+    }
+}

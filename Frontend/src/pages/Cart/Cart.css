@@ -1,0 +1,147 @@
+.Cart {
+    margin: 100px 0px;
+}
+
+.Cart hr {
+    height: 1px;
+    background-color: #E2E2E2;
+    border: none;
+}
+
+.cartItemsTitle {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr 1fr 1fr 0.5fr;
+    align-items: center;
+    color: grey;
+    font-size: max(1vw, 12px);
+}
+
+.cartItemsItem {
+    margin: 10px 0px;
+    color: black;
+}
+
+.cartItemsItem img {
+    width: 50px;
+}
+
+.cartItemsItem div {
+    max-width: 40px;
+    text-align: center;
+    border: 1px solid #EBEBEB;
+    padding: 8px 8px;
+    font-size: 12px;
+}
+
+.CartItemsRemoveIcon {
+    cursor: pointer;
+    color: #ed6972;
+    font-weight: bold;
+}
+
+/* New Styling for Quantity Section */
+.cartItemsQuantity {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.cartItemsQuantity button {
+    background-color: #EBEBEB;
+    border: 1px solid #dcdcdc;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.cartItemsQuantity span {
+    font-weight: bold;
+    color: #555;
+    padding: 0 10px;
+}
+
+/* Cart Bottom and Checkout Section */
+.cartBottom {
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    gap: max(12vw, 20px);
+}
+
+.cartTotal {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cartTotalDetails {
+    display: flex;
+    justify-content: space-between;
+    color: #555555;
+}
+
+.cartTotal hr {
+    margin: 10px 0px;
+}
+
+.cartTotal button {
+    border: none;
+    color: white;
+    background-color: #ed6972;
+    width: max(15vw, 200px);
+    padding: 12px 0px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Promo Code Section */
+.cartPromoCode {
+    flex: 1;
+}
+
+.cartPromoCode p {
+    color: #555555;
+}
+
+.cartPromoCodeInput {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eaeaea;
+    border-radius: 4px;
+}
+
+.cartPromoCodeInput input {
+    background: transparent;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+}
+
+.cartPromoCodeInput button {
+    width: max(10vw, 150px);
+    padding: 12px 5px;
+    background-color: black;
+    border: none;
+    color: white;
+    border-radius: 4px;
+}
+
+/* Media Query for Mobile Devices */
+@media(max-width:750px) {
+    .Cart {
+        flex-direction: column-reverse;
+    }
+
+    .cartBottom {
+        flex-direction: column-reverse;
+    }
+
+    .cartPromoCode {
+        justify-content: start;
+    }
+}

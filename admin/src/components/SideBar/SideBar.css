@@ -1,0 +1,41 @@
+.SideBar {
+    width: 18%;
+    min-height: 100vh;
+    border: 1.5px solid #A9A9A9;
+    border-top: 0;
+    font-size: max(1vw, 10px);
+}
+
+.SideBarOptions {
+    padding-top: 50px;
+    padding-left: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.SideBarOption {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border: 1px solid #A9A9A9;
+    border-right: 0;
+    padding: 8px 10px;
+    border-radius: 3px 0px 0px 3px;
+    cursor: pointer;
+}
+
+.SideBarOption img {
+    width: 20px;
+}
+
+.SideBarOption.active {
+    background-color: #fff0ed;
+    border-color: #ed6972;
+}
+
+@media (max-width:900px) {
+    .SideBarOption p {
+        display: none;
+    }
+}
