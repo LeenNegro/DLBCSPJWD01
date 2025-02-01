@@ -52,7 +52,7 @@ const TrackOrder = () => {
                         <p>Items: {order.items.length}</p>
                         <p>
                             {currency}
-                            {order.amount}
+                            {parseFloat(order.amount).toFixed(2)}
                         </p>
                         <p>Status: {order.status}</p> {/* Display order status */}
                     </div>

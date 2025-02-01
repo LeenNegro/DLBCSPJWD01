@@ -61,7 +61,7 @@ const Order = () => {
                         <p>Items: {order.items.length}</p>
                         <p>
                             {currency}
-                            {order.amount}
+                            {parseFloat(order.amount).toFixed(2)}
                         </p>
                         <select
                             onChange={(e) => statusHandler(e, order._id)}

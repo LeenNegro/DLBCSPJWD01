@@ -62,6 +62,7 @@ const TrackOrder = () => {
                                         </span>
                                     ))}
                                 </div>
+                                <br />
                                 <p className="OrderItemName">
                                     {order.address.firstName} {order.address.lastName}
                                 </p>
@@ -75,7 +76,7 @@ const TrackOrder = () => {
                             <p>Items: {order.items.length}</p>
                             <p>
                                 {currency}
-                                {order.amount}
+                                {parseFloat(order.amount).toFixed(2)}
                             </p>
                             <p>Status: {order.status}</p>
                         </div>

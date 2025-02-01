@@ -10,6 +10,7 @@
     font-weight: 600;
     color: #333;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .OrderList {
@@ -22,10 +23,15 @@
     background-color: #ffffff;
     border: 1px solid #ddd;
     border-radius: 8px;
-    display: flex;
     padding: 15px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 2fr;
+    /* Creates five columns */
+    align-items: center;
+    gap: 15px;
+    text-align: center;
 }
 
 .OrderItem:hover {
@@ -36,86 +42,49 @@
     width: 50px;
     height: 50px;
     object-fit: cover;
-    margin-right: 15px;
-}
-
-.OrderItem>div {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 100%;
+    margin-right: 10px;
 }
 
 .OrderItemProduct {
     font-size: 14px;
     color: #666;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 
 .OrderItemProduct span {
-    margin-right: 8px;
+    display: block;
 }
 
-.OrderItemName {
-    font-size: 16px;
-    font-weight: 500;
-    color: #333;
-    margin-top: 8px;
-}
-
-.OrderItemAddress {
-    margin-top: 10px;
-    font-size: 14px;
-    color: #555;
-}
-
-.OrderItemPhone {
-    font-size: 14px;
-    color: #333;
-    margin-top: 5px;
-}
-
-.OrderItem p {
+.OrderItemDetails p {
     font-size: 14px;
     color: #333;
     margin: 5px 0;
 }
 
-.OrderItem select {
-    padding: 5px;
-    font-size: 14px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: #f5f5f5;
-    width: 180px;
-    margin-top: 10px;
-}
-
-.OrderItem select:focus {
-    border-color: #007bff;
-    outline: none;
-}
-
 .OrderItem .status {
     font-size: 14px;
-    color: #555;
     font-weight: bold;
+    color: #555;
 }
 
-.OrderList .OrderItem:last-child {
-    margin-bottom: 0;
+.OrderItem .price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.OrderItemAddress {
+    font-size: 14px;
+    color: #555;
 }
 
 @media (max-width: 768px) {
     .OrderItem {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .OrderItem img {
-        margin-bottom: 10px;
-    }
-
-    .OrderItemProduct {
-        text-align: center;
+        grid-template-columns: 1fr;
+        /* Stack in one column for smaller screens */
+        gap: 10px;
+        text-align: left;
     }
 }
